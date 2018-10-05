@@ -1,10 +1,10 @@
 {
   "name": "terra-schematics",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A schematics",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine **/*_spec.js"
+    "build": "gulp build",
+    "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
     "schematics"
@@ -13,14 +13,21 @@
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "^0.8.3",
-    "@angular-devkit/schematics": "^0.8.3",
+    "@angular-devkit/core": "^0.8.4",
+    "@angular-devkit/schematics": "^0.8.4",
     "@angular-devkit/schematics-cli": "^0.8.3",
     "@schematics/angular": "^0.8.3",
     "@schematics/schematics": "^0.8.3",
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.31",
+    "core-js": "^2.5.7",
     "jasmine": "^2.8.0",
+    "ntypescript": "^1.201706190042.1",
     "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.0-alpha.3"
   }
 }
